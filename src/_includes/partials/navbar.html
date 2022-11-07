@@ -1,6 +1,6 @@
 <header id="header" class="header tra-menu navbar-dark">
 
-<div class="{{ 'lg:fixed' if path == 'home' }} header-wrapper">
+<div class=" header-wrapper">
    
    <!-- MOBILE HEADER -->
    <div class="wsmobileheader clearfix">	  	
@@ -21,7 +21,7 @@
 
     <nav class="wsmenu clearfix" x-data="{ isOpen: false }" @keydown.escape="isOpen = false"  @click.away="isOpen = false">
 
-            {% if navigation.items %}
+                {% if navigation.items %}
 
                 <ul 
                 class="wsmenu-list nav-orange-red-hover">
@@ -33,12 +33,12 @@
                     {% endfor %}
                     <li aria-haspopup="true"><a href="#">Services<span class="wsarrow"></span></a>
                         <ul class="sub-menu">
-                        <li aria-haspopup="true"><a href="/custom-website/">Custom Website</a></li>
+                                <li aria-haspopup="true"><a href="/custom-website/">Custom Website</a></li>
                                 <li aria-haspopup="true"><a href="http://houston.returnondata.agency/e-commerce.html">E-Commerce</a></li>
                                 <li aria-haspopup="true"><a href="http://houston.returnondata.agency/digital-marketing.html">Digital Marketing</a></li>
                                 <li aria-haspopup="true"><a href="http://houston.returnondata.agency/seo-ppc-advertising.html">SEO & PPC Advertising</a></li>	
-                            </ul>
-                        </li>
+                        </ul>
+                    </li>
                 </ul>
 
             {% endif %}
