@@ -1,7 +1,13 @@
+image:
+  - name: "logo"
+  - folder: '{{ baseurl }}static/img/logo-dark.png'
 items:
   - text: Home
     url: "#"
-  - text: About
+  - text: About Us
     url: "#"
-  - text: Blog
-    url: /blog
+  - text: Contact Us
+    url: "#"
+  - text: Help Center
+    url: "#"
+

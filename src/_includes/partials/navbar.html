@@ -1,33 +1,47 @@
-<div class="{{ 'lg:fixed' if path == 'home' }} w-full">
-    <nav class="flex items-center justify-center lg:justify-between flex-wrap p-6 lg:px-0 container mx-auto" x-data="{ isOpen: false }" @keydown.escape="isOpen = false"  @click.away="isOpen = false">
-        <!--Logo etc-->
-        <div class="flex items-center">
-            <a href="/" class="text-indigo-500 font-bold text-lg">
-                Logo</a>
-        </div>
+<header id="header" class="header tra-menu navbar-dark">
 
-        <!--Toggle button (hidden on large screens)-->
-        <button @click="isOpen = !isOpen" type="button" class="ml-auto block lg:hidden px-2 text-primary-500 hover:text-primary-500 focus:outline-none focus:text-primary-500" :class="{ 'transition transform-180': isOpen }" aria-label="Menu">
-            <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
-                <path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/>
-                <path x-show="!isOpen" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
-            </svg>
-        </button>
+<div class="{{ 'lg:fixed' if path == 'home' }} header-wrapper">
+   
+   <!-- MOBILE HEADER -->
+   <div class="wsmobileheader clearfix">	  	
+    <span class="smllogo"><img src="{{ baseurl }}asset/img/logo-dark.png" alt="mobile-logo"/></span>
+    <a id="wsnavtoggle" class="wsanimated-arrow"><span></span></a>	
+ </div>
 
-        <!--Menu-->
-        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto text-center " :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }" x-show.transition="true">
+
+ <!-- NAVIGATION MENU -->
+  <div class="wsmainfull menu clearfix">
+    <div class="wsmainwp clearfix">
+
+
+        <!-- HEADER LOGO -->
+        <div class="desktoplogo"><a href="http://houston.returnondata.agency" class="logo-black"><img src="{{ baseurl }}asset/img/logo-dark.png" alt="header-logo"></a></div>
+        <div class="desktoplogo"><a href="http://houston.returnondata.agency" class="logo-white"><img src="{{ baseurl }}asset/img/logo-white.png" alt="header-logo"></a></div>
+
+
+    <nav class="wsmenu clearfix" x-data="{ isOpen: false }" @keydown.escape="isOpen = false"  @click.away="isOpen = false">
 
             {% if navigation.items %}
 
-                <ul class="pt-6 lg:pt-0 list-reset lg:flex justify-end flex-1 items-center">
+                <ul 
+                class="wsmenu-list nav-orange-red-hover">
                     {% for item in navigation.items %}
-                        <li class="nav__item mr-3">
-                            <a @click="isOpen = false" class="text-ml inline-block text-gray-500 no-underline hover:text-indigo-500 py-2 px-4" href="{{ item.url }}">{{ item.text }}</a>
+                        <li aria-haspopup="true">
+                            <a @click="isOpen = false" href="{{ item.url }}">{{ item.text }}</a>
                         </li>
+								
                     {% endfor %}
+                    <li aria-haspopup="true"><a href="#">Services<span class="wsarrow"></span></a>
+                        <ul class="sub-menu">
+                        <li aria-haspopup="true"><a href="/custom-website/">Custom Website</a></li>
+                                <li aria-haspopup="true"><a href="http://houston.returnondata.agency/e-commerce.html">E-Commerce</a></li>
+                                <li aria-haspopup="true"><a href="http://houston.returnondata.agency/digital-marketing.html">Digital Marketing</a></li>
+                                <li aria-haspopup="true"><a href="http://houston.returnondata.agency/seo-ppc-advertising.html">SEO & PPC Advertising</a></li>	
+                            </ul>
+                        </li>
                 </ul>
 
             {% endif %}
-        </div>
     </nav>
 </div>
+</header>
