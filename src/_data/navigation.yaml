@@ -1,6 +1,6 @@
 image:
-  - name: "logo"
-  - folder: '{{ baseurl }}static/img/logo-dark.png'
+  - name: logo
+  - folder: "{{ baseurl }}static/img/logo-dark.png"
 items:
   - text: Home
     url: "#"
@@ -10,4 +10,5 @@ items:
     url: "#"
   - text: Help Center
     url: "#"
-
+  - text: Services
+    url: "#"
