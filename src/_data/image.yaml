@@ -1,0 +1,3 @@
+image:
+  - name: logo
+  - folder: "{{ baseurl }}static/img/logo-dark.png"
