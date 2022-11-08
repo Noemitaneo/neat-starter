@@ -64,7 +64,7 @@ baseurl: 'https://net-cms-sample.netlify.app/'
   <body>
     {% include "./partials/navbar.html" %}
 
-    {{ content | safe }}
+    <div id="page" class="page">{{ content | safe }}</div>
 
     {% include "./partials/footer.html" %}
 
