@@ -71,5 +71,6 @@ collections:
         file: "src/_data/image.yaml"
         fields:
           - { label: Logo, name: logo, widget: image }
+          - { label: URL, name: url, widget: string }
           - { label: Background, name: background, widget: image }
 
