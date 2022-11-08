@@ -23,15 +23,14 @@
 
                 {% if navigation.items %}
 
-                <ul 
-                class="wsmenu-list nav-orange-red-hover">
+                <ul class="wsmenu-list nav-orange-red-hover">
                     {% for item in navigation.items %}
                         <li aria-haspopup="true">
                             <a @click="isOpen = false" href="{{ item.url }}" style="color:black">{{ item.text }}</a>
                         </li>
 								
                     {% endfor %}
-                    <li aria-haspopup="true"><a href="#">Services<span class="wsarrow"></span></a>
+                    <li aria-haspopup="true"  style="color:black" ><a href="#">Services<span class="wsarrow"></span>
                         <ul class="sub-menu">
                                 <li aria-haspopup="true"><a href="/custom-website/">Custom Website</a></li>
                                 <li aria-haspopup="true"><a href="http://houston.returnondata.agency/e-commerce.html">E-Commerce</a></li>
