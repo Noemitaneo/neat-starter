@@ -1,5 +1,5 @@
 image:
   - name: logo
-  - folder: "{{ baseurl }}static/img/logo-dark.png"
+  - url: "{{ baseurl }}static/img/logo-dark.png"
 logo: /static/img/logo-mix.png
 background: /static/img/bg.png
