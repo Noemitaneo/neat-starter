@@ -62,11 +62,14 @@ baseurl: 'https://net-cms-sample.netlify.app/'
         </script>
 </head> 
   <body>
-	<div id="page" class="page"> {% include "./partials/navbar.html" %}
+	<div id="page" class="page"> 
+	
+		{% include "./partials/navbar.html" %}
 
-    {{ content | safe }}
+        {{ content | safe }}
 
-    {% include "./partials/footer.html" %}</div>
+        {% include "./partials/footer.html" %}
+	</div>
 
     {% if path == "home" %}
       <!-- Netlify Identity Widget -->
