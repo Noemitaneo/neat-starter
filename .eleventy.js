@@ -29,16 +29,15 @@ module.exports = function (eleventyConfig) {
   //   "./src/admin/config.yml": "./admin/config.yml",
   //   "./node_modules/alpinejs/dist/cdn.min.js": "./static/js/alpine.js",
   //   "./node_modules/prismjs/themes/prism-tomorrow.css":
-  //     "./static/css/prism-tomorrow.css",
-  // });
+  //     "./static/css/prism-tomorrow.css", 
 
   // Copy Image Folder to /_site
-  eleventyConfig.addPassthroughCopy("./src/static/img");
-  eleventyConfig.addPassthroughCopy("./src/static/images");
-  eleventyConfig.addPassthroughCopy("./src/static/css");
-  eleventyConfig.addPassthroughCopy("./src/static/fonts");
-  eleventyConfig.addPassthroughCopy("./src/static/js");
-  eleventyConfig.addPassthroughCopy("./src/static/php");
+  eleventyConfig.addPassthroughCopy('./src/static/');
+  // eleventyConfig.addPassthroughCopy("./src/static/images");
+  // eleventyConfig.addPassthroughCopy("./src/static/css");
+  // eleventyConfig.addPassthroughCopy("./src/static/fonts");
+  // eleventyConfig.addPassthroughCopy("./src/static/js");
+  // eleventyConfig.addPassthroughCopy("./src/static/php");
 
 
 
