@@ -1,4 +1,4 @@
-<header id="header" class="header tra-menu navbar-white">
+<header id="header" class="header tra-menu navbar-dark">
 
 <div class=" header-wrapper">
    
@@ -27,7 +27,7 @@
                 class="wsmenu-list nav-orange-red-hover">
                     {% for item in navigation.items %}
                         <li aria-haspopup="true">
-                            <a @click="isOpen = false" href="{{ item.url }}">{{ item.text }}</a>
+                            <a @click="isOpen = false" href="{{ item.url }}" style="color:black">{{ item.text }}</a>
                         </li>
 								
                     {% endfor %}
