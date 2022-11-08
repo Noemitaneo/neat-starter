@@ -1,3 +1,18 @@
+
+	<!-- PRELOADER SPINNER
+		============================================= -->	
+		<div id="loading" class="skyblue-loading">
+			<div id="loading-center">
+				<div id="loading-center-absolute">
+					<div class="object" id="object_one"></div>
+					<div class="object" id="object_two"></div>
+					<div class="object" id="object_three"></div>
+					<div class="object" id="object_four"></div>
+				</div>
+			</div>
+		</div>
+
+	
 <header id="header" class="header tra-menu navbar-dark">
 
 <div class=" header-wrapper">
@@ -6,9 +21,8 @@
    <div class="wsmobileheader clearfix">	  	
     <span class="smllogo"><img src="{{ baseurl }}static/img/logo-dark.png" alt="mobile-logo"/></span>
     <a id="wsnavtoggle" class="wsanimated-arrow"><span></span></a>	
- </div>
-
-
+   </div>
+	
  <!-- NAVIGATION MENU -->
   <div class="wsmainfull menu clearfix">
     <div class="wsmainwp clearfix">
@@ -19,18 +33,18 @@
         <div class="desktoplogo"><a href="http://houston.returnondata.agency" class="logo-white"><img src="{{ baseurl }}static/img/logo-white.png" alt="header-logo"></a></div>
 
 
-    <nav class="wsmenu clearfix" x-data="{ isOpen: false }" @keydown.escape="isOpen = false"  @click.away="isOpen = false">
+    <nav class="wsmenu clearfix">
 
                 {% if navigation.items %}
 
                 <ul class="wsmenu-list nav-orange-red-hover">
                     {% for item in navigation.items %}
                         <li aria-haspopup="true">
-                            <a @click="isOpen = false" href="{{ item.url }}" style="color:black">{{ item.text }}</a>
+                            <a href="{{ item.url }}" style="color:black">{{ item.text }}</a>
                         </li>
 								
                     {% endfor %}
-                    <li aria-haspopup="true"><a href="#" style="color:black" >Services<span class="wsarrow"></span></a>
+                    <li aria-haspopup="true"><a href="#" style="color:black">Services<span class="wsarrow"></span></a>
                         <ul class="sub-menu">
                                 <li aria-haspopup="true"><a href="/custom-website/">Custom Website</a></li>
                                 <li aria-haspopup="true"><a href="http://houston.returnondata.agency/e-commerce.html">E-Commerce</a></li>
