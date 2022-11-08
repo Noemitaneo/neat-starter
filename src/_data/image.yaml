@@ -1,5 +1,5 @@
 image:
- - name: logo
- - url: "../static/img/logo-mix.png"
-logo: /static/img/logo-mix.png
+  - name: logo
+  - url: ../static/img/logo-mix.png
+logo: /static/img/logo-dark.png
 background: /static/img/bg.png
